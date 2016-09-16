@@ -1,0 +1,26 @@
+<h1>please book appointment</h1>
+<input action="action" type="button" value="Back" onclick="history.go(-1);" />
+
+
+</nav>
+    
+    
+<div class="container">  
+ <form ng-submit="myFunc()">
+    
+  <select ng-model="data" ng-options="slot.slotId as slot.time for slot in slots">
+      <option value="">Select time slot</option>
+  </select>
+
+      
+    
+      <input type="submit">
+     
+     {{message}}
+     
+</form>
+         
+          
+
+
+</div>

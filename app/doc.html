@@ -1,0 +1,41 @@
+<div class="container"> 
+    <b><a href="/#myAppointment">My Appointments</a></b>
+    <h4>{{doctor.fname}} &nbsp; {{doctor.lname}}</h3>
+<br>
+
+  <table class="table table-hover">
+
+    <tbody>
+      <tr>
+        <td>Specialization</td>
+        <td>{{doctor.specialization}}</td>
+        
+      </tr>
+      <tr>
+        <td>Qualification</td>
+        <td>{{doctor.qualification}}</td>
+        
+      </tr>
+        <tr>
+        <td>Telephone</td>
+        <td>{{doctor.telephone}}</td>
+        
+      </tr>
+        <tr>
+        <td>Email</td>
+        <td>{{doctor.email}}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+
+
+    
+    <label>Check doctor's availability</label>
+    
+<input type = "date" name = "date" ng-model= "date1">
+
+<h3><b><a href="#/addappt/{{doctor._id}}/{{date1}}">Book appointment</a></b></h3>
+    
+</div>
+    </div>

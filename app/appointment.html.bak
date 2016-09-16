@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+
+
+   <div class="container">
+       <li ng-repeat="appt in appointment">
+    
+    <div class="panel panel-default">
+        <div class="panel-heading">{{appt.doc_fname}} {{appt.doc_lname}}</div>
+        <div class="panel-body">
+        <label>Appointment Time:  </label>{{appt.appointment_time}}
+            <br>
+          <label>Appointment Date:  </label>   {{appt.date}}
+            <br>
+            
+          <a href="#/rejectappt/{{appt._id}}" title="Reject"><span class="glyphicon glyphicon-remove" ></span></a>
+            &nbsp; &nbsp;
+           <a href="#/confirmappt/{{appt._id}}" title="Accept"  ><span class="glyphicon glyphicon-ok"></span></a>  
+        </div>
+    </div>
+       </li>
+    </div> 
+    
+
+</div>
+</body>
+</html>

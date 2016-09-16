@@ -1,0 +1,43 @@
+  
+
+    
+  <div class="container">  
+       <b><a href="/#myAppointment">View Appointments</a></b>   
+       <br><br>
+    <h3>Specialization</h3>
+  <select ng-model="data" ng-options="opt.specialization as opt.specialization for opt in doctors|unique:'specialization'">
+      <option value="">Select</option>
+  </select>
+   
+           <br><br>
+    
+           
+      
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="doctor in doctors| filter:{specialization:data}">
+    <div class="thumbnail"  >
+      <div class="caption">
+        <h3>{{doctor.fname}}   {{doctor.lname}}</h3>
+          <label>Qualification:</label>{{doctor.qualification}}
+          <br>
+           <label>specialization:</label>{{doctor.specialization}}
+        <p><a ng-href="#/doc/{{doctor._id}}" class="btn btn-primary" role="button">Book Appointment</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+        
+</div>
+</div>
+</body>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    

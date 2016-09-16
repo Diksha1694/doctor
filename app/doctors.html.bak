@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+ <div>   
+
+  <div class="container">  <!--   <div ng-view>   
+  
+      </div>-->
+      
+      
+
+            
+            
+   
+   
+              
+                  <!--  {{doctor.fname}}-->
+               
+               <!--<select ng-model="data" ng-options="opt as opt.fname for opt in doctors ">
+                </select>-->
+         
+  <select ng-model="data" ng-options="opt.speciality as opt.speciality for opt in doctors|unique:'speciality'">
+      <option value="">Select doctor</option>
+  </select>
+   
+           <br><br>
+           <!--      <div class="row" > 
+  <div class="col-sm-4" style="border: 2px solid black" ng-repeat="doctor in doctors| filter:{speciality:data}">
+      <a ng-href="#/doc/{{doctor._id}}">{{doctor.fname}}</a>
+                </div>
+  
+</div>-->
+
+           
+      
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="doctor in doctors| filter:{speciality:data}">
+    <div class="thumbnail"  >
+    <!--  <img src="..." alt="...">-->
+      <div class="caption">
+        <h3>{{doctor.fname}}   {{doctor.lname}}</h3>
+          <label>Qualification:</label>{{doctor.qualification}}
+          <br>
+           <label>Speciality:</label>{{doctor.speciality}}
+        <p><a ng-href="#/doc/{{doctor._id}}" class="btn btn-primary" role="button">Book Appointment</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      
+      
+      
+      
+      
+            
+        
+</div>
+</div>
+</body>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    

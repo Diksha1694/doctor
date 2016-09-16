@@ -1,0 +1,72 @@
+
+<div class="container">
+  
+<div class="col-sm-6 col-sm-offset-3">
+
+
+
+              <center>
+                  <h1><span class="fa fa-sign-in"></span> Registration</h1>
+    </center>
+          </b>
+               <center> 
+                   <form ng-controller="registerController" class="form-horizontal"  ng-submit="postform()">
+                       
+                       
+                <div class="form-group">
+                        <label>First Name</label>
+                        <input name="fname" id="fname" placeholder="Enter First Name"  class="form-control" ng-model="newuser.fname" required><br>                  </div><br>
+                       
+                       
+              <div class="form-group">
+                     <label>Last Name</label>
+                        <input name="lname" id="lname"  class="form-control" placeholder="Enter Last Name" ng-model="newuser.lname" required><br>                  </div><br>
+                       
+                       
+                         <div class="form-group">
+                        <label>Username</label>
+                         <input name="username" id="username"   class="form-control" placeholder="Enter Username" ng-model="newuser.username"required><br>
+              </div><br>
+                       
+                       
+              <div class="form-group">
+                        <label>Password</label>
+                         <input name="password" type="password" id="password"  class="form-control" placeholder="Enter password" ng-model="newuser.password" required><br> </div><br>
+                       
+                       
+                       <div class="form-group">
+                        <label>Telephone</label>
+                         <input name="telephone" id="telephone" type="telephone"  class="form-control" placeholder="Enter telephone" ng-model="newuser.telephone" required><br>
+              </div><br>
+                   
+                       
+                       
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea rows="4" cols="50" name="address" id="address" type="textarea"  class="form-control" placeholder="Enter address" ng-model="newuser.address" required></textarea><br>
+              </div><br>
+             
+            
+              <div class="form-group">
+                        <label>Email</label>
+                         <input name="email" id="email" type="email"  class="form-control" placeholder="Enter Email address" ng-model="newuser.email" required><br>
+              </div><br>
+                       
+                       
+              
+                    <input type="hidden" name="action" id="action" value="create" class="form-control">
+                    
+                 
+                    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Submit</button>
+  
+        </div>   
+                       
+                       
+                       
+                </form>
+                </center>
+                 </br>
+                    </br>
+</div>            
+ </div>    

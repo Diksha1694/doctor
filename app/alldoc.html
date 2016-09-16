@@ -1,0 +1,24 @@
+<div class="container">
+
+ <b> <a href="#/adddoc">Add New Doctor</a> &nbsp;&nbsp;&nbsp;
+           <a href="#/showappt">Appointments</a></b>
+    <br><br>
+       <li ng-repeat="doc in alldoctors">
+         
+    <div class="panel panel-default">
+        <div class="panel-heading">{{doc.fname}} {{doc.lname}}</div>
+        <div class="panel-body">
+        <label>Specialization:  </label>{{doc.specialization}}
+            <br>
+          <label>Qualification:  </label>   {{doc.qualification}}
+            <br>
+         
+           <a href="#/delete/{{doc._id}}">Delete Doctor</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#/showDocAppt/{{doc._id}}">Show all Appoinments</a>
+        </div>
+    </div>
+       </li>
+    </div> 
+    
+
+</div>

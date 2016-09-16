@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+    <body ng-app="postApp" >
+    
+    <div class="container">
+
+<div class="col-sm-6 col-sm-offset-3">
+
+    
+   
+    <center>
+
+    <h1><span class="fa fa-sign-in"></span> Login</h1>
+
+
+        <form ng-controller="loginController" class="form-horizontal"  ng-submit="send()">
+  <div class="control-group">
+    <label class="control-label" >Username</label> 
+    <div class="controls">
+      <input type="text" ng-model="data.username"  placeholder="Username">
+    </div>
+  </div>
+             <br>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">Password</label> <br>
+    <div class="controls">
+      <input type="password"  ng-model='data.password' placeholder="Password">
+    </div>
+  </div>
+             <br>
+  <div class="control-group">
+    <div class="controls">
+   
+        <br> <br> <br>
+        
+        <div class="form-actions">
+        <button type="submit"  class="btn btn-primary">Sign in</button>
+ 
+        </div>
+        
+        
+    </div>
+  </div>
+</form>
+        
+        
+        
+        
+        
+</center>
+
+        </div>
+    </div>
+</body>

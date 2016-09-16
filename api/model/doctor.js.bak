@@ -1,0 +1,19 @@
+var dbObj = require('./../config/mongoconnection');
+
+var doctorSchema = {
+   
+fname : String,
+    lname : String,
+   speciality  : String,
+    qualification : String,
+    createdDate: { type: Date, default: Date.now },
+	modifiedDate: { type: Date, default: Date.now }
+};
+
+
+var docSchemaObj = new dbObj.Schema(doctorSchema, {collection:"doctors", versionKey: false});
+
+var doctorObj = dbObj.model("doctors", docSchemaObj);
+
+module.exports = doctorObj;
+

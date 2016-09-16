@@ -1,0 +1,25 @@
+
+<div class="container">
+
+  <b><a href="#/adddoc">Add New Doctor</a>&nbsp;&nbsp;&nbsp;
+      <a href="#/doctors">Doctors</a></b>
+
+ 
+       <li ng-repeat="appt in appointment">
+         
+    <div class="panel panel-default">
+        <div class="panel-heading">{{appt.doc_fname}} {{appt.doc_lname}}</div>
+        <div class="panel-body">
+        <label>Appointment Time:  </label>{{appt.appointment_time}}
+            <br>
+          <label>Appointment Date:  </label>   {{appt.date}}
+            <br>
+            
+          <a href="#/rejectappt/{{appt._id}}" title="Reject"><span class="glyphicon glyphicon-remove" ></span></a>
+            &nbsp; &nbsp;
+           <a href="#/confirmappt/{{appt._id}}" title="Accept"  ><span class="glyphicon glyphicon-ok"></span></a>  
+        </div>
+    </div>
+       </li>
+    </div> 
+

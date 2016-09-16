@@ -1,0 +1,19 @@
+var dbObj = require('./../config/mongoconnection');
+
+var appointmentSchema = {
+    doc_id: Number,
+    patient_id: Number,
+    status: String,
+    time_of_booking: Date,
+    date: Date,
+    appointment_time: Date,
+
+};
+
+
+
+var appointmentSchemaObj = new dbObj.Schema(appointmentSchema, {collection:"appointments", versionKey: false});
+
+var appointmentObj = dbObj.model("appointments", appointmentSchemaObj);
+
+module.exports = appointmentObj;

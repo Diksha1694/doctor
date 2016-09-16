@@ -1,0 +1,40 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      
+     
+    </div>
+    <div class="col-sm-4">
+        <b><a href="/#showdoc">Book appointment</a></b>
+        <br>
+        <br>
+        <h1>All Appointments</h1>
+        <table>
+
+            <tr>
+            <th>Doctor</th>
+            <th>Appointment Date</th>
+            <th>Appointment time</th>
+                <th>Status</th>
+                 <th>Action</th>
+            </tr>
+
+            <tr ng-repeat = "x in appts">
+                <td>{{x.doc_fname}} {{x.doc_lname}}</td>
+                <td>{{x.date}}</td>
+                <td>{{x.appointment_time}}</td>
+                <td>{{x.status}}</td>
+                <td> <div ng-if="x.status == 'pending' || x.status == 'confirm'"><a href="#/cancelAppt/{{x._id}}">Cancel</a>
+               </div></td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="col-sm-4">
+     
+      
+    </div>
+  </div>
+</div>
+
